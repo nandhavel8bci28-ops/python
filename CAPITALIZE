@@ -1,0 +1,14 @@
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    # We split by ' ' to preserve multiple spaces between names
+    # and capitalize() only the first character if it's a letter.
+    words = s.split(' ')
+    capitalized_words = [word.capitalize() for word in words]
+    
+    return ' '.join(capitalized_words)
