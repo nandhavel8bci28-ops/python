@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read the total number of stamps
+n = int(input())
+
+# Initialize an empty set to store distinct countries
+stamps = set()
+
+# Loop through the input and add each country to the set
+for _ in range(n):
+    stamps.add(input().strip())
+
+# The length of the set is the number of distinct stamps
+print(len(stamps))
