@@ -1,0 +1,10 @@
+from itertools import permutations
+
+# Read input
+line = input().split()
+s = sorted(line[0]) # Sorting ensures lexicographical order
+k = int(line[1])
+
+# Generate and print permutations
+for p in permutations(s, k):
+    print("".join(p))
