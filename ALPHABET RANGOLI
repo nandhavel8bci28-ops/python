@@ -1,0 +1,20 @@
+import string
+
+def print_rangoli(size):
+    # Get the lowercase alphabet
+    alphabet = string.ascii_lowercase
+    
+    # List to store each line of the rangoli
+    lines = []
+    
+    # Generate the top half and middle line
+    for i in range(size):
+        # Slice characters from 'size-1' down to 'i', then back up to 'size-1'
+        chars = alphabet[size - 1 : i : -1] + alphabet[i : size]
+        # Join characters with '-' and center the string based on total width (4*size - 3)
+        row = "-".join(chars).center(4 * size - 3, "-")
+        lines.append(row)
+    
+    # Reverse the top half to get the bottom half and join everything with newlines
+    # lines[::-1] is the top half (including middle), lines[1:] is the bottom half
+    print("\n".join(lines[::-1] + lines[1:]))
