@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read the initial set A
+_ = int(input())
+a = set(map(int, input().split()))
+
+# Read the number of other sets
+n = int(input())
+
+for _ in range(n):
+    # Get the operation name (e.g., 'update')
+    # We ignore the length of the other set as it's not needed for the operation
+    command = input().split()[0]
+    
+    # Read the elements of the other set
+    other_set = set(map(int, input().split()))
+    
+    # Dynamically call the method on set 'a'
+    getattr(a, command)(other_set)
+
+# Print the sum of the remaining elements in A
+print(sum(a))
