@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read N (students) and X (subjects)
+n, x = map(int, input().split())
+
+# Create a list to store the scores for each subject
+subject_marks = []
+for _ in range(x):
+    subject_marks.append(list(map(float, input().split())))
+
+# Use zip with the unpack operator (*) to group scores by student
+# Each tuple in 'zipped_marks' will contain all scores for one student
+for student_scores in zip(*subject_marks):
+    # Calculate and print the average for each student
+    avg = sum(student_scores) / x
+    print(round(avg, 1))
