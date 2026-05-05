@@ -1,0 +1,9 @@
+def average(array):
+    # Create a set to get unique heights
+    distinct_heights = set(array)
+    
+    # Calculate the average
+    result = sum(distinct_heights) / len(distinct_heights)
+    
+    # Return the result rounded to 3 decimal places
+    return round(result, 3)
