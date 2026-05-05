@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read English newspaper subscribers
+n = int(input())
+english_subscribers = set(map(int, input().split()))
+
+# Read French newspaper subscribers
+m = int(input())
+french_subscribers = set(map(int, input().split()))
+
+# Find the union of both sets
+# Both .union() or the | operator work here
+at_least_one = english_subscribers.union(french_subscribers)
+
+# Print the total count of unique students
+print(len(at_least_one))
