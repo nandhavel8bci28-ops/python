@@ -1,0 +1,16 @@
+import textwrap
+
+def wrap(string, max_width):
+    """
+    Wraps a long string into a paragraph of a specific width using textwrap.fill.
+
+    Args:
+        string: The long input string.
+        max_width: The maximum width for each line.
+
+    Returns:
+        A single string with newline characters where the breaks should be.
+    """
+    # The textwrap.fill function automatically handles wrapping the text
+    # at the specified width and inserting newline characters.
+    return textwrap.fill(string, max_width)
