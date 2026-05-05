@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read x and the target result k
+x, k = map(int, input().split())
+
+# Read the polynomial expression as a string
+polynomial = input()
+
+# eval() evaluates the string as a Python expression using the current value of x
+if eval(polynomial) == k:
+    print(True)
+else:
+    print(False)
