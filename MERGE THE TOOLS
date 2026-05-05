@@ -1,0 +1,13 @@
+def merge_the_tools(string, k):
+    # Iterate through the string in steps of k
+    for i in range(0, len(string), k):
+        # Slice the string to get the current substring t_i
+        substring = string[i : i + k]
+        
+        # Use a dictionary to remove duplicates while keeping order.
+        # dict.fromkeys() creates a dictionary where characters are keys.
+        # Since keys must be unique, duplicates are automatically removed.
+        unique_chars = dict.fromkeys(substring)
+        
+        # Join the keys back into a single string and print
+        print("".join(unique_chars))
