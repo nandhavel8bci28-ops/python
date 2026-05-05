@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read English newspaper subscribers
+n = int(input())
+english_subs = set(map(int, input().split()))
+
+# Read French newspaper subscribers
+m = int(input())
+french_subs = set(map(int, input().split()))
+
+# Find students in one set or the other, but not both
+# You can also use the ^ operator: english_subs ^ french_subs
+either_but_not_both = english_subs.symmetric_difference(french_subs)
+
+# Output the total count
+print(len(either_but_not_both))
