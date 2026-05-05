@@ -1,0 +1,12 @@
+from itertools import product
+
+# Read input lists from STDIN and convert elements to integers
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+# Compute the cartesian product using itertools.product
+cartesian_product = list(product(A, B))
+
+# Output the tuples in the required space-separated format
+for item in cartesian_product:
+    print(item, end=' ')
